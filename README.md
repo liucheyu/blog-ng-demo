@@ -11,3 +11,11 @@ git branch -M main
 git remote add origin https://github.com/liucheyu/blog-ng-demo.git
 git push -u origin main
 ~~~
+
+使用套件部屬至github,會在github上生成gh-page分支,並在github操作setting -> pages 做設定
+
+~~~
+sudo npm i -g angular-cli-ghpages
+ng build --prod --base-href=/blog-ng-demo/
+npx ngh --dir=dist/github-page-demo --no-silent
+~~~
