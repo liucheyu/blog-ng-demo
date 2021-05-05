@@ -1,3 +1,7 @@
-<ul class="list-group list-group-flush">
-    <li class="list-group-item"  *ngFor="let subject of subjects">{{subject}}</li>
-</ul>
+<!-- <ul class="list-group list-group-flush">
+    <li class="list-group-item"  *ngFor="let subject of subjects"><a routerLinkActive="active" [routerLink]="subject" class="nav-link active">{{subject}}</a></li>
+</ul> -->
+
+<div class="list-group">
+    <a class="list-group-item"  *ngFor="let subject of subjects" routerLinkActive="active" [routerLink]="subject" class="nav-link active">{{subject}}</a>
+</div>

@@ -22,12 +22,13 @@ npx ngh --dir=dist/github-page-demo --no-silent
 
 引入bootstrap
 
-1.
+1. install boostrap
+
 ~~~bash
 npm install bootstrap --save
 ~~~
 
-2.開啟angular.json
+2. 開啟angular.json
 
 ~~~
 "styles": [
@@ -36,3 +37,55 @@ npm install bootstrap --save
           ]
 ~~~
 
+使用route
+
+1. 引入route module
+
+~~~bash
+ng generate module app-routing --flat --module=app
+~~~
+
+2. 修改app-routing.module.ts
+
+~~~typescript
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+
+const routes: Routes = [
+  { path: "", redirectTo: "home", pathMatch: "full"},
+  { path: 'home', component: HomeComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+~~~
+
+
+安裝angular material
+
+1.安裝
+
+~~~bash
+#npm install --save @angular/material @angular/cdk
+#選用
+#npm install --save @angular/animations
+#選用
+#npm install --save hammerjs
+ng add @angular/material
+~~~
+
+2.在styles.css引入css
+
+~~~
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+~~~
+
+3.在index.html引入google icon
+
+~~~
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+~~~
