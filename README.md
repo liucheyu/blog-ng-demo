@@ -21,13 +21,14 @@ npx ngh --dir=dist/github-page-demo --no-silent
 ~~~
 
 引入bootstrap
+
 1.
 ~~~bash
 npm install bootstrap --save
 ~~~
 
-2.
-開啟angular.json
+2.開啟angular.json
+
 ~~~
 "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
