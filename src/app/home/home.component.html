@@ -1,4 +1,4 @@
-<header class="navbar bg-light">
+<!-- <header class="navbar bg-light">
     header
   </header>
   <div class="mx-2">
@@ -13,25 +13,26 @@
         <div class="col-1 mainHight">rside</div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-<!-- <div class="home-container">
+<div class="home-container">
   <mat-toolbar>Toolbar</mat-toolbar>
   <div class="mx-2">  
     <mat-sidenav-container class="nav-container">
       <mat-sidenav mode="side" opened="true" [fixedInViewport]="false" [fixedTopGap]="0" [fixedBottomGap]="0">
 
         <mat-nav-list>
-          <a mat-list-item *ngFor="let link of subjects"> {{ link }} </a>
+          <a mat-list-item *ngFor="let subject of subjects" routerLinkActive="active" [routerLink]="subject"> {{ subject }} </a>
        </mat-nav-list>
       </mat-sidenav>
   
       <mat-sidenav mode="side" opened="true" position="end">
       </mat-sidenav>
   
-      <mat-sidenav-content>123
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
   </div>
   
-</div> -->
+</div>

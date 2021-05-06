@@ -15,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MarkdownComponent } from './main/markdown/markdown.component'
+import { MarkdownComponent } from './main/markdown/markdown.component';
+import { PghomeComponent } from './pghome/pghome.component'
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MarkdownComponent } from './main/markdown/markdown.component'
     LsideComponent,
     HomeComponent,
     MarkdownComponent,
+    PghomeComponent,
   ],
   imports: [
     BrowserModule,
