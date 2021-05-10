@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-pghome',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PghomeComponent implements OnInit {
 
-  constructor() { }
+  assetsMdPath = "assets/md/";
+  assetsMdJsonPath = "";
+  pg = "";
+  titles = new Array<string>();
+
+  constructor(
+    private router: ActivatedRoute,
+    private http: HttpClient
+  ) {
+    router.params.subscribe(params => {
+      this.pg = params.pg;
+      this.assetsMdJsonPath = this.assetsMdPath + this.pg + "/md.json";
+    });
+  }
 
   ngOnInit(): void {
+    this.http.get(this.assetsMdJsonPath).subscribe((res: string[]) => {
+      for(let sub in res) {
+        this.titles.push();
+      }
+      
+      console.log(this.titles);
+    });
   }
 
 }

@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    
+  ) { }
 
-  opened = true;
-
-  subjects = [
-    "markdown","angular","java"
-  ]
+  pgList = ["java","markdown","angular"]
 
   ngOnInit(): void {
   }
+
+
 
 }
