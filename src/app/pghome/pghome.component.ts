@@ -13,6 +13,7 @@ export class PghomeComponent implements OnInit {
   assetsMdJsonPath = "";
   pg = "";
   titles = new Array<string>();
+  contents = new Array<string>();
 
   constructor(
     private router: ActivatedRoute,
@@ -25,13 +26,18 @@ export class PghomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get(this.assetsMdJsonPath).subscribe((res: string[]) => {
-      for(let sub in res) {
-        this.titles.push();
-      }
+    this.http.get(this.assetsMdJsonPath).subscribe((res: MdModel[]) => {
+      res.forEach( (value, index) => {
+        this.titles.push(value.titleName);
+        this.contents.push(this.assetsMdPath+ this.pg + "/" + value.fileName + ".md");
+      });
       
-      console.log(this.titles);
+      console.log(this.contents);
     });
   }
 
+}
+
+class MdModel {
+  constructor(public titleName:string, public fileName:string){}
 }

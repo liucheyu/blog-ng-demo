@@ -34,6 +34,22 @@
     </div>
     
   </div> -->
+  <mat-toolbar>Toolbar</mat-toolbar>
+  <div class="container">
+   
+   
+      <mat-sidenav-container class="nav-container">
+        <mat-sidenav mode="side" opened="true" [fixedInViewport]="false" [fixedTopGap]="0" [fixedBottomGap]="0">
+            <mat-nav-list>     
+              <div *ngFor="let path of titles">{{path}}</div>       
+         </mat-nav-list>
+        </mat-sidenav>
+         <mat-sidenav-content>     
+           <div class="p-2"><markdown *ngFor="let path of contents" [src]="path"></markdown></div>               
+        </mat-sidenav-content>
+      </mat-sidenav-container>
 
-  <div>{{pg}}</div>
-  <markdown *ngFor="let path of titles" [src]="path"></markdown>
+    
+  </div>
+
+

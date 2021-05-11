@@ -3,3 +3,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.nav-container {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+  }
+
+mat-sidenav {
+    width: 10vw;
+}
+
+.titlePadding {
+    padding: 5px 5px 5px 15px;
+}
+
+.subtitlePadding {
+    padding: 5px 5px 5px 35px;
+}

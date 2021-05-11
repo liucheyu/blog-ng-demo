@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
     
   ) { }
 
-  pgList = ["java","markdown","angular"]
+  pgList = ["markdown","angular"]
 
   ngOnInit(): void {
   }

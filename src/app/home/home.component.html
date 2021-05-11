@@ -1,3 +1,19 @@
-<ul>
-  <li *ngFor="let pg of pgList"><a href="#" [href]="['pghome/'+pg]">{{pg}}</a></li>
-</ul>
+<mat-toolbar>Toolbar</mat-toolbar>
+  <div class="container">
+    
+    <div class="xl-md-10 sm-md-5">  
+      <mat-sidenav-container class="nav-container">
+        <mat-sidenav mode="side" opened="true" [fixedInViewport]="false" [fixedTopGap]="0" [fixedBottomGap]="0">
+            <mat-nav-list>            
+         </mat-nav-list>
+        </mat-sidenav>
+        
+         <mat-sidenav-content>
+          <div class="titlePadding"><span style="font-size: 0.8em; color: Tomato;"><i class="fas fa-circle"></i></span> 程式語言</div>
+          <div class="subtitlePadding" *ngFor="let pg of pgList"><a href="#" [href]="['pghome/'+pg]">{{pg}}</a></div>
+
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+    
+  </div>
