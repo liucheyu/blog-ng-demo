@@ -1,3 +1,42 @@
+### 基本環境配置
+&nbsp;
+
+全域安裝angular cli
+
+~~~bash
+npm install -g @angular/cli
+~~~
+&nbsp;
+
+建立專案 
+
+~~~bash
+ng new blog-ng-demo
+~~~
+&nbsp;
+
+開啟服務
+
+~~~
+ng serve
+#port有衝突的話,package.json修改start ng serve --port=4500
+~~~
+&nbsp;
+
+即時更新plugin
+F5輸入chrown
+開啟plugin後輸入port
+&nbsp;
+
+創建組件
+
+~~~bash
+ng g c welcome
+#g=generate
+#c=component
+~~~
+&nbsp;
+
 
 初始化git指令
 
@@ -10,6 +49,7 @@ git branch -M main
 git remote add origin https://github.com/liucheyu/blog-ng-demo.git
 git push -u origin main
 ~~~
+&nbsp;
 
 使用套件部屬至github,會在github上生成gh-page分支,並在github操作setting -> pages 做設定
 
@@ -18,6 +58,7 @@ sudo npm i -g angular-cli-ghpages
 ng build --prod --base-href=/blog-ng-demo/
 npx ngh --dir=dist/github-page-demo --no-silent
 ~~~
+&nbsp;
 
 引入bootstrap
 
@@ -26,6 +67,7 @@ npx ngh --dir=dist/github-page-demo --no-silent
 ~~~bash
 npm install bootstrap --save
 ~~~
+&nbsp;
 
 2. 開啟angular.json
 
@@ -35,14 +77,16 @@ npm install bootstrap --save
               "src/styles.css"
           ]
 ~~~
+&nbsp;
 
-使用route
+使用route(若在初始化專案時已經選擇引入時,忽略此步驟)
 
 1. 引入route module
 
 ~~~bash
 ng generate module app-routing --flat --module=app
 ~~~
+&nbsp;
 
 2. 修改app-routing.module.ts
 
@@ -62,7 +106,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 ~~~
-
+&nbsp;
 
 安裝angular material
 
@@ -88,6 +132,7 @@ ng add @angular/material
 ~~~html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 ~~~ 
+&nbsp;
 
 ---
 
